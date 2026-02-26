@@ -1,0 +1,27 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Rental>
+ */
+class RentalFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        $start = fake()->dateTimeBetween('-1 year', 'now');
+        $end   = fake()->dateTimeBetween($start, '+30 days');
+        return [
+            'startDate'  => $start,
+            'endDate'    => $end,
+            'totalPrice' => fake()->randomFloat(2, 10, 500)
+        ];
+    }
+}
