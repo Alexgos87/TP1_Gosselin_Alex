@@ -14,13 +14,13 @@ class Equipment extends Model
     protected $fillable = [
         'name',
         'description',
-        'dailyPrice',
-        'categoryId',
+        'daily_price',
+        'category_id',
     ];
 
     public function category()
     {
-        return $this->belongsTo(Category::class, 'categoryId');
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     // Many-to-many avec Sport
@@ -28,14 +28,14 @@ class Equipment extends Model
     {
         return $this->belongsToMany(
             Sport::class,
-            'equipmentsports',
-            'equipmentId',
-            'sportId'
+            'equipment_sport',
+            'equipment_id',
+            'sport_id'
         );
     }
 
     public function rentals()
     {
-        return $this->hasMany(Rental::class, 'equipmentId');
+        return $this->hasMany(Rental::class, 'equipment_id');
     }
 }

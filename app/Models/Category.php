@@ -13,6 +13,6 @@ class Category extends Model
 
     public function equipment()
     {
-        return $this->hasMany(Equipment::class, 'categoryId');
+        return $this->hasMany(Equipment::class, 'category_id');
     }
 }

@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->text('description');
-            $table->decimal('dailyPrice', 10, 2);
-            $table->foreignId('categoryId')
+            $table->decimal('daily_price', 10, 2);
+            $table->foreignId('category_id')
                   ->constrained('categories');
-            $table->timestamps();
         });
     }
 

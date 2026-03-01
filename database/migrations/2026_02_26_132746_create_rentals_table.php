@@ -13,14 +13,13 @@ return new class extends Migration
     {
         Schema::create('rentals', function (Blueprint $table) {
             $table->id();
-            $table->date('startDate');
-            $table->date('endDate');
-            $table->decimal('totalPrice', 10, 2);
-            $table->foreignId('userId')
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->decimal('total_price', 10, 2);
+            $table->foreignId('user_id')
                   ->constrained('users');
-            $table->foreignId('equipmentId')
+            $table->foreignId('equipment_id')
                   ->constrained('equipment');
-            $table->timestamps();
         });
     }
 

@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('config', function (Blueprint $table) {
             $table->id();
             $table->integer('laravel_version');
-            $table->timestamps();
         });
     }
 

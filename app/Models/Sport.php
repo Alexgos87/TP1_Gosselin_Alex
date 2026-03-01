@@ -15,9 +15,9 @@ class Sport extends Model
     {
         return $this->belongsToMany(
             Equipment::class,
-            'equipmentsports',
-            'sportId',
-            'equipmentId'
+            'equipment_sport',
+            'sport_id',
+            'equipment_id'
         );
     }
 }
