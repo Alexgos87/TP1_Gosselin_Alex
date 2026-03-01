@@ -19,8 +19,8 @@ class RentalFactory extends Factory
         $start = fake()->dateTimeBetween('-1 year', 'now');
         $end   = fake()->dateTimeBetween($start, '+30 days');
         return [
-            'start_date'  => $start,
-            'end_date'    => $end,
+            'start_date' => $start,
+            'end_date' => $end,
             'total_price' => fake()->randomFloat(2, 10, 500)
         ];
     }

@@ -25,10 +25,10 @@ class UserFactory extends Factory
     {
         return [
             'firstName' => fake()->firstName(),
-            'lastName'  => fake()->lastName(),
-            'email'     => fake()->unique()->safeEmail(),
-            'phone'     => fake()->numerify('###########'),
-            'password'  => bcrypt('password'),
+            'lastName' => fake()->lastName(),
+            'email' => fake()->unique()->safeEmail(),
+            'phone' => fake()->numerify('###########'),
+            'password' => bcrypt('password'),
         ];
     }
 

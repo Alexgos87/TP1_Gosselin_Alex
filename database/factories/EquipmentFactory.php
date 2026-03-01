@@ -17,9 +17,9 @@ class EquipmentFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'        => fake()->word(),
+            'name' => fake()->word(),
             'description' => fake()->sentence(),
-            'dailyPrice'  => fake()->randomFloat(2, 5, 150)
+            'daily_price'  => fake()->randomFloat(2, 5, 150)
         ];
     }
 }
