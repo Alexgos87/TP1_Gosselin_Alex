@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('daily_price', 10, 2);
             $table->foreignId('category_id')
                   ->constrained('categories');
+            $table->timestamps();
         });
     }
 

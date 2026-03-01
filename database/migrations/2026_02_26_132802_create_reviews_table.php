@@ -19,6 +19,7 @@ return new class extends Migration
                   ->constrained('users');
             $table->foreignId('rental_id')
                   ->constrained('rentals');
+            $table->timestamps();
         });
     }
 

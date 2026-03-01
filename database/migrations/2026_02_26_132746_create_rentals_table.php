@@ -20,6 +20,7 @@ return new class extends Migration
                   ->constrained('users');
             $table->foreignId('equipment_id')
                   ->constrained('equipment');
+            $table->timestamps();
         });
     }
 
